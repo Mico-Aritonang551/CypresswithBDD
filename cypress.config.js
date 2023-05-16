@@ -18,5 +18,7 @@ module.exports = defineConfig ({
     nonGlobalStepDefenitions: true,
     setupNodeEvents,
   },
+
+  chromeWebSecurity: false
 });
 
