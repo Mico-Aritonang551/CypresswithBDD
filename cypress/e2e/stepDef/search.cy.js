@@ -1,13 +1,15 @@
-const {Given, When, Then} = require('@badeball/cypress-cucumber-preprocessor')
+import SearchData from './search.page';
+
+const { Given, When, Then } = require('@badeball/cypress-cucumber-preprocessor')
 
 Given('I am on home page', () => {
- cy.visit('http://zero.webappsecurity.com/index.html')
+    SearchData.visit()
 })
 
 When('I enter a keyword into search bar', () => {
-    cy.get('#searchTerm').type('online {enter}')
+    SearchData.inputKeyword()
 })
 
 Then('I should see keyword as the search result', () => {
-    cy.get('h2').should('contain.text', 'Search Results:') 
+    cy.get('h2').should('contain.text', 'Search Results:')
 })
