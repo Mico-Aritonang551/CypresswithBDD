@@ -1,4 +1,5 @@
-import SearchData from './search.page';
+import SearchData from '../pageObject/search.page';
+
 
 const { Given, When, Then } = require('@badeball/cypress-cucumber-preprocessor')
 
